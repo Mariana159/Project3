@@ -1,0 +1,71 @@
+<html lang="en">
+    <head>
+        <meta charset="UFT-8">
+        <meta http-equiv="x-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>launchpad</title>
+        <link rel="stylesheet" type="text/css" href="..//1stpage.css">
+        <script src="..//p5.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./Spirited.js"></script>
+        <script src="./ghost.js"></script>
+        
+       
+        
+        <script>
+          
+        </script>
+        
+
+        <style>
+             body{
+                background-image: url("https://s3.amazonaws.com/static.rogerebert.com/uploads/review/primary_image/reviews/great-movie-spirited-away-2002/EB20120711REVIEWS08120719998AR.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: aliceblue;
+            }
+
+            
+        </style>
+
+    </head>
+<body>
+    <span id="bigger" class="jump"></span>
+    <h1 id="weatherinfo" class="weather">
+        <span id="city1"></span>,
+        <span id="country"></span><br>
+        <span id="temp"></span>°F<br>
+        <span id="clouds"></span>
+
+    </h1>
+</body>
+
+<body>
+    <span id="testelm"></span><br>
+    <h1 id="allpssh">
+    <span class="pssh" id="pssh1"></span><br>
+    <span class="pssh2" id="psh2"></span><br>
+    <span class="pssh3" id="psh3"></span> <br>
+    <span class="pssh4" id="psh4"></span><br>
+    <span class="pssh5" id="psh5"></span>
+    <br>
+    </h1>
+    
+    <h1 class="runapi" id="vamonos">It isn't safe for us here. The spirits are staring at us. Even our protagonist, <span id="namespirit"></span>is running away. It's time to dip. <a href="./bathhouse.html"> Let's go!</a></h1>
+</body>
+
+
+    <script>
+        document.getElementById("city1").innerHTML= city;
+        document.getElementById("country").innerHTML = country;
+        var rtemp = Math.round(temp);
+        document.getElementById('temp').innerHTML = rtemp;
+        document.getElementById('clouds').innerHTML = desc;
+
+        document.getElementById("namespirit").innerHTML = namespirited;
+        
+     </script>
+    
+    
+</html>

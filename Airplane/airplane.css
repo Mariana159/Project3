@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Schoolbell&display=swap');
+
+body{
+    
+    font-family: 'Gothic A1', sans-serif;
+    margin-top: 5%;
+    margin-left:  10%;
+    margin-right: 10%;
+    
+}
+
+.mcat{
+    width: 30%;
+    height: 31%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin-left: 0%;
+    margin-top: 10%;
+}
+
+.pboxposition{
+    object-position: 50% 50%;
+    margin-left: 26%;
+    margin-top: 14%;
+    width: 24%;
+    height: 8%; 
+  
+}
+
+.smallbox{
+    height: 2%; 
+}
+
+
+
+h1{
+    
+    color: rgb(254, 253, 253);
+    border-style:double;
+    text-align: center;
+}

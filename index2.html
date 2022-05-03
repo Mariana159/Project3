@@ -1,0 +1,190 @@
+<html lang="en">
+    <head>
+        <meta charset="UFT-8">
+        <meta http-equiv="x-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial=scale-1.0">
+        <title>Miniproject2</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <style>
+            body{
+                background-color: palevioletred;
+                margin-top: 40px;
+            }
+            
+            h1{
+                background-color: paleturquoise;
+                color: rgb(8, 3, 3);
+                border-style: ridge;
+                text-align: center;
+            }
+
+            p{
+                color: rgb(221, 210, 196);
+                
+            }
+            
+            p.underlinesText{
+                color: rgb(12, 29, 29);
+                text-decoration: underline;
+            }
+
+
+            
+        </style>
+
+    </head>
+
+    <h1>
+        Disney Princesses!
+    </h1>
+    
+    <body>
+        <script>
+            console.log('This is the console.log response');
+        </script>
+        
+        <p class="underlinesText"> Disney Princess is a franchise with a line-up of fictional female heroines who have appeared in various Disney animated feature films. Owned by the Walt Disney Company, and created in the mid-1990s.
+            The franchise currently comprises of twelve female protagonists from eleven different Walt Disney Animation Studios films and one Pixar film, who are either royal by birth, royal by marriage, or considered a "princess" due to their significant portrayal of heroism in their respective films.
+            <p> <a href="pages/secondpage.html">Click here to meet one!</a></p>
+            The character line-up has varied since the creation of the franchise. Currently, the franchise is comprised of 12 members: Snow White, Cinderella, Aurora</p>
+        <img src= "https://static.wikia.nocookie.net/disney/images/1/12/Disney_Princess_2014_Logo.png/revision/latest/top-crop/width/360/height/360?cb=20171022144553" >
+        
+        
+    </body>
+    
+</html>
+
+<script>
+
+    //API key =946b694fccddd5270c19c19e8424efec
+    //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+    //chicago
+    //lat = 41.8781
+    //long= -87.6298 
+    //seattle
+    //lat= '47.6062' 
+    //lon='-122.3321'
+   
+    console.log(window);
+
+
+    getValue();
+    
+    function timer (){
+    
+   setTimeout(function timer(){
+        getValue();
+        timer();
+        },3000)
+    }
+    
+    class2();
+    //city name, temp, discription, country name
+    function class2(){
+        var APIkey ='946b694fccddd5270c19c19e8424efec';
+        var lat= '47.6062';
+        var lon='-122.3321';
+        var units='imperial';
+       $.ajax({
+           //Call SETTING & PARAMS
+           type: 'GET',
+           //GEt Post Put Delte
+           dataType: 'json',
+           //Use a backtick `--its near the squiggley line. This does not bring happiness ', this one does `. 
+            url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}&units=${units}`,
+           async: false,
+           crossDomain: true,
+
+           //What to do when the call gets returned
+           // 500 is unsuccessful complete means once done with call
+           complete: function (response){
+               //checks if call is good, keeps if from goinging without response, check on responsejson for tis ex
+               if (response.readyState === 4 && response.status === 200){
+                   console.log(response);
+                   
+                   var temp= response.responseJSON.main.temp;
+                   var country=response.responseJSON.sys.country;
+                   var desc= response.responseJSON.weather[0].description;
+                   var city=response.responseJSON.name;
+                   var other= response.responseJSON.sys.sunrise;
+                   console.log(temp);
+                   console.log(country);
+                   console.log(desc);
+                   console.log(city);
+                   console.log(other);
+                   
+                   
+
+                
+                   //isolate the info youre looking for 
+                   
+
+                   //document.querySelector(".backgroundColor").style.background, you can see these update on the console, refresh refresh
+                   //after you check this you can make it do whatever you want
+                  
+               }
+
+           }
+        })
+    }
+
+    function yahoo(){
+       $.ajax({
+           //Call SETTING & PARAMS
+           type: 'GET',
+           //GEt Post Put Delte
+           dataType: 'json',
+           url: 'https://yh-finance.p.rapidapi.com/auto-complete',
+           async: false,
+           crossDomain: true,
+
+           //What to do when the call gets returned
+           // 500 is unsuccessful complete means once done with call
+           complete: function (response){
+               //checks if call is good, keeps if from goinging without response, check on responsejson for tis ex
+               if (response.readyState === 4 && response.status === 200){
+                   console.log(response);
+
+                   
+               }
+
+           }
+        })
+    }
+    
+   function getValue(){
+       $.ajax({
+           //Call SETTING & PARAMS
+           type: 'GET',
+           //GEt Post Put Delte
+           dataType: 'json',
+           url: 'http://api.open-notify.org/iss-now.json',
+           async: false,
+           crossDomain: true,
+
+           //What to do when the call gets returned
+           // 500 is unsuccessful complete means once done with call
+           complete: function (response){
+               //checks if call is good, keeps if from goinging without response, check on responsejson for tis ex
+               if (response.readyState === 4 && response.status === 200){
+                   console.log(response);
+
+                   //isolate the info youre looking for 
+                   Lat = response.responseJSON.iss_position.latitude;
+                   Long = response.responseJSON.iss_position.longitude;
+
+                   //document.querySelector(".backgroundColor").style.background, you can see these update on the console, refresh refresh
+                   //after you check this you can make it do whatever you want
+                   console.log(Lat);
+                   console.log(Long);
+               }
+
+           }
+        })
+    }
+
+    
+
+</script>   
