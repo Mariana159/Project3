@@ -6,8 +6,8 @@
         <title>launchpad</title>
         
 
-        <link rel="stylesheet" type="text/css" href="./airplane.css">
-        <script src="./delta.js"></script>
+        <link rel="stylesheet" type="text/css" href="./airplane/airplane.css">
+        <script src="./airplane/delta.js"></script>
 
         <script>
             document.getElementById("form1").onchange = function() {
@@ -21,7 +21,7 @@
 
         <style>
             body{
-                background-image: url("./delat.jpg");
+                background-image: url("./airplane/delat.jpg");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -34,13 +34,13 @@
    <form name="form1" id="form1">
         <select onChange="window.location.href=this.value" name="subject" id="subject" class="pboxposition" >
             <!--Kiki-->
-            <option  value="..//Kiki/Kiki.html" class="smallbox">Stockholm,Sweden</option>
+            <option  value="./Kiki/Kiki.html" class="smallbox">Stockholm,Sweden</option>
             <!--Howls-->
-            <option value="..//Howls/Howls.html" selected="selected" class="smallbox" >Alsace, France</option>
+            <option value="./Howls/Howls.html" selected="selected" class="smallbox" >Alsace, France</option>
             <!--Grave-->
             <!--<option value="..//" selected="selected" class="smallbox" > Kobe, Japan</option>-->
             <!--Spirited-->
-            <option value="..//Spirit/Spirited.html" selected="selected" class="smallbox" > Matsuyama, Japan</option>
+            <option value="./Spirit/Spirited.html" selected="selected" class="smallbox" > Matsuyama, Japan</option>
         </select>
         <br><br>
     </form>
